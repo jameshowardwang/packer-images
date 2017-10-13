@@ -1,0 +1,32 @@
+{
+  "min_packer_version": "1.0.0",
+  "variables": {
+    "aws_region": "us-west-2"
+  },
+  "builders": [{
+    "name": "ubuntu16-ami",
+    "ami_name": "{{user `user`}}-ubuntu-{{isotime | clean_ami_name}}",
+    "ami_description": "An Ubuntu 16.04 AMI with my stuffs",
+    "instance_type": "t2.micro",
+    "region": "{{user `aws_region`}}",
+    "type": "amazon-ebs",
+    "source_ami_filter": {
+      "filters": {
+      "virtualization-type": "hvm",
+      "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+      "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+    "ssh_username": "ubuntu"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "inline": [
+      "sleep 30",
+      "whoami",
+      "pwd"
+    ]
+  }]
+}
