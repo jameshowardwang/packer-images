@@ -28,6 +28,7 @@
       "sleep 30",
       "whoami",
       "pwd",
+      "sudo apt-get install --assume-yes gcc",
       "wget --quiet https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh -O anaconda.sh",
       "bash anaconda.sh -b -p $HOME/anaconda",
       "export PATH=$HOME/anaconda/bin:$PATH",
