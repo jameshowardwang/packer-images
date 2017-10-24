@@ -2,7 +2,7 @@
   "min_packer_version": "1.0.0",
   "variables": {
     "aws_region": "us-east-1",
-    "user": "olgabot"
+    "user": "{{env `USER`}}"
   },
   "builders": [{
     "name": "ubuntu16-ami",
