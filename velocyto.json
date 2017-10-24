@@ -6,7 +6,7 @@
   },
   "builders": [{
     "name": "ubuntu16-ami",
-    "ami_name": "{{user `user`}}-velocyto-ubuntu-{{isotime | clean_ami_name}}",
+    "ami_name": "{{user `user`}}-velocyto-{{isotime | clean_ami_name}}",
     "ami_description": "An Ubuntu 16.04 AMI with velocyto, built on Anaconda 5.0.0 (Release Date: September 26, 2017)",
     "instance_type": "t2.micro",
     "region": "{{user `aws_region`}}",
