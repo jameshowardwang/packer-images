@@ -38,7 +38,7 @@
       "conda config --set always_yes yes --set changeps1 no",
       "conda update -q conda",
       "conda info -a",
-      "conda install numpy scipy cython scikit-learn h5py click",
+      "conda install numpy scipy cython scikit-learn h5py click matplotlib",
       "pip install pysam loompy",
       "git clone https://github.com/velocyto-team/velocyto.py.git",
       "cd velocyto.py",
