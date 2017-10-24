@@ -5,8 +5,8 @@
     "user": "{{env `USER`}}"
   },
   "builders": [{
-    "name": "ubuntu16-ami-velocyto",
-    "ami_name": "{{user `user`}}-ubuntu-{{isotime | clean_ami_name}}",
+    "name": "ubuntu16-ami",
+    "ami_name": "{{user `user`}}-velocyto-ubuntu-{{isotime | clean_ami_name}}",
     "ami_description": "An Ubuntu 16.04 AMI with velocyto, built on Anaconda 5.0.0 (Release Date: September 26, 2017)",
     "instance_type": "t2.micro",
     "region": "{{user `aws_region`}}",
@@ -28,7 +28,8 @@
       "sleep 30",
       "whoami",
       "pwd",
-      "sudo apt-get install --assume-yes gcc",
+      "sudo apt-get update",
+      "sudo apt-get install --assume-yes --fix-missing gcc libgl-dev awscli",
       "wget --quiet https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh -O anaconda.sh",
       "bash anaconda.sh -b -p $HOME/anaconda",
       "export PATH=$HOME/anaconda/bin:$PATH",
