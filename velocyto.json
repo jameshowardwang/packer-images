@@ -17,7 +17,6 @@
       "name": "olgabot-anaconda*",
       "root-device-type": "ebs"
       },
-      "owners": ["099720109477"],
       "most_recent": true
     },
     "ssh_username": "ubuntu"
