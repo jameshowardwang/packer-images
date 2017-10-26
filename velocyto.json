@@ -14,7 +14,7 @@
     "source_ami_filter": {
       "filters": {
       "virtualization-type": "hvm",
-      "name": "ubuntu/images/olgabot-anaconda*",
+      "name": "olgabot-anaconda*",
       "root-device-type": "ebs"
       },
       "owners": ["099720109477"],
