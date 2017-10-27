@@ -14,7 +14,7 @@
     "source_ami_filter": {
       "filters": {
       "virtualization-type": "hvm",
-      "name": "olgabot-anaconda*",
+      "name": "{{user `user`}}-anaconda*",
       "root-device-type": "ebs"
       },
       "owners": ["423543210473"],
@@ -25,9 +25,10 @@
   "provisioners": [{
     "type": "shell",
     "inline": [
-      "echo '--- sleep 60 start ---'",
-      "sleep 60",
-      "echo '--- sleep 60 end ---'",
+      "echo '--- sleep start ---'",
+      "sleep 30",
+      "echo '--- sleep end ---'",
+      "echo $PATH",
       "conda install numpy scipy cython scikit-learn h5py click matplotlib numba pysam cython",
       "pip install loompy",
       "git clone https://github.com/velocyto-team/velocyto.py.git",
