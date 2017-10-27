@@ -17,6 +17,7 @@
       "name": "olgabot-anaconda*",
       "root-device-type": "ebs"
       },
+      "owners": ["423543210473"],
       "most_recent": true
     },
     "ssh_username": "ubuntu"
@@ -24,7 +25,9 @@
   "provisioners": [{
     "type": "shell",
     "inline": [
-      "sleep 30",
+      "echo '--- sleep 60 start ---'",
+      "sleep 60",
+      "echo '--- sleep 60 end ---'",
       "conda install numpy scipy cython scikit-learn h5py click matplotlib numba pysam cython",
       "pip install loompy",
       "git clone https://github.com/velocyto-team/velocyto.py.git",
