@@ -6,7 +6,7 @@
   },
   "builders": [{
     "name": "ubuntu16-ami",
-    "ami_name": "{{user `user`}}-ubuntu-{{isotime | clean_ami_name}}",
+    "ami_name": "{{user `user`}}-czirna1-{{isotime | clean_ami_name}}",
     "ami_description": "An Ubuntu 16.04 AMI with my stuffs",
     "instance_type": "t2.micro",
     "region": "{{user `aws_region`}}",
