@@ -39,8 +39,10 @@
     "inline": [
       "sleep 30",
       "sudo apt-get update && apt-get install -y libboost-all-dev python3-all-dev graphviz git",
-      "cp /tmp/* /usr/local/bin/",
-      "chmod ugo+x /tmp/*"
+      "cp /tmp/cziRna1.so /usr/local/bin/",
+      "cp /tmp/Spyros-3cells.py /usr/local/bin/",
+      "chmod ugo+x /usr/local/bin/Spyros-3cells.py",
+      "chmod ugo+x /usr/local/bin/cziRna1.so"
     ]
   }
 ]
