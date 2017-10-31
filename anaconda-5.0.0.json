@@ -36,7 +36,8 @@
       "conda config --set always_yes yes --set changeps1 no",
       "conda install -n root _license",
       "conda update -q conda",
-      "conda info -a"
+      "conda info -a",
+      "pip install awscli"
     ]
   }]
 }
