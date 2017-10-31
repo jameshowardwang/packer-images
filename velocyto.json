@@ -30,7 +30,7 @@
       "echo '--- sleep start ---' $(date)",
       "sleep 30",
       "echo '--- sleep end ---' $(date)",
-      "sudo apt-get install -y gcc libgl",
+      "sudo apt-get install -y gcc libgl1-mesa-dev",
       "tail ~/.bashrc",
       "tail ~/.bash_profile",
       "echo '$PATH:' $PATH --- $(date)",
