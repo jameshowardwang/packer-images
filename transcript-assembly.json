@@ -26,15 +26,18 @@
     {
     "type": "file",
     "source": "/Users/olgabot/code/cziRna1/cziRna1.so",
+    "execute_command": "{{ .Vars }} /bin/bash -vx {{ .Path }}",
     "destination": "/usr/local/bin/cziRna1.so"
     },
     {
     "type": "file",
     "source": "/Users/olgabot/code/cziRna1/Spyros-3cells.py",
+    "execute_command": "{{ .Vars }} /bin/bash -vx {{ .Path }}",
     "destination": "/usr/local/bin/Spyros-3cells.py"
   },
     {
     "type": "shell",
+    "execute_command": "{{ .Vars }} /bin/bash -vx {{ .Path }}",
     "inline": [
       "sleep 30",
       "sudo apt-get update && apt-get install -y libboost-all-dev python3-all-dev graphviz git",
