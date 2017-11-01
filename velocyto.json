@@ -24,14 +24,11 @@
   }],
   "provisioners": [{
     "type": "shell",
-    "inline_shebang": "/bin/bash -e",
-    "execute_command": "{{ .Vars }} /bin/bash -vx {{ .Path }}",
+    "inline_shebang": "/bin/bash -le",
     "inline": [
-      "echo '--- sleep start ---' $(date)",
       "sleep 30",
-      "echo '--- sleep end ---' $(date)",
+      "sudo apt-get update",
       "sudo apt-get install -y gcc libgl1-mesa-dev",
-      "export PATH=$HOME/anaconda/bin:$PATH",
       "conda install numpy scipy cython scikit-learn h5py click matplotlib numba cython",
       "pip install loompy pysam",
       "git clone https://github.com/velocyto-team/velocyto.py.git",
